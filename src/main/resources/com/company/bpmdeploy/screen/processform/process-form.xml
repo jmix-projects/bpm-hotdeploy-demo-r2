@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://processForm.caption">
+    <layout expand="actionsPanel" spacing="true">
+        <form>
+            <textField id="description" caption="Description"/>
+        </form>
+        <hbox id="actionsPanel" spacing="true">
+            <button id="startProcessBtn" icon="font-icon:CHECK" caption="Start Process"/>
+        </hbox>
+    </layout>
+</window>
