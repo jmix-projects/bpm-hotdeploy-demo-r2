@@ -3,10 +3,11 @@
         caption="msg://processForm.caption">
     <layout expand="actionsPanel" spacing="true">
         <form>
-            <textField id="description" caption="Description"/>
+            <textField id="description" caption="Description 2"/>
         </form>
+        <checkBox id="check" caption="Test"/>
         <hbox id="actionsPanel" spacing="true">
-            <button id="startProcessBtn" icon="font-icon:CHECK" caption="Start First Process"/>
+            <button id="startProcessBtn" icon="font-icon:CHECK" caption="Start Second Process"/>
         </hbox>
     </layout>
 </window>
