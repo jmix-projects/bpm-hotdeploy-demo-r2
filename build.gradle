@@ -25,6 +25,7 @@ repositories {
             password = rootProject['premiumRepoPass']
         }
     }
+    mavenLocal()
 }
 
 dependencies {
@@ -48,6 +49,7 @@ dependencies {
     }
     implementation("io.jmix.bpm:jmix-bpm-starter")
     implementation("io.jmix.bpm:jmix-bpm-ui-starter")
+    implementation 'io.jmix.bpm:jmix-bpm-hotdeploy-starter:1.1.999-SNAPSHOT'
 }
 
 test {
