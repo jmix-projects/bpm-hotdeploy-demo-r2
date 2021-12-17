@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:jmix="http://jmix.io/schema/bpm/bpmn" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.flowable.org/processdef">
-  <process id="test_process" name="Test_process" isExecutable="true">
-    <startEvent id="startEvent1" name="Start">
+  <process id="test_rest_process" name="TestRestProcess" isExecutable="true">
+    <startEvent id="startEvent1" name="Begin">
       <extensionElements>
-        <jmix:formData type="jmix-screen" openMode="DIALOG" screenId="demo_ProcessForm" />
+        <jmix:formData type="jmix-screen" openMode="DIALOG" screenId="demo_AnotherProcessForm" />
       </extensionElements>
-      <outgoing>Flow_1lbv0og</outgoing>
+      <outgoing>Flow_111vfcs</outgoing>
     </startEvent>
-    <endEvent id="Event_13de1tb">
-      <incoming>Flow_1lbv0og</incoming>
+    <endEvent id="Event_0u2fx71" name="End">
+      <incoming>Flow_111vfcs</incoming>
     </endEvent>
-    <sequenceFlow id="Flow_1lbv0og" sourceRef="startEvent1" targetRef="Event_13de1tb" />
+    <sequenceFlow id="Flow_111vfcs" sourceRef="startEvent1" targetRef="Event_0u2fx71" />
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_process">
-    <bpmndi:BPMNPlane id="BPMNPlane_process" bpmnElement="test_process">
-      <bpmndi:BPMNEdge id="Flow_1lbv0og_di" bpmnElement="Flow_1lbv0og">
+    <bpmndi:BPMNPlane id="BPMNPlane_process" bpmnElement="test_rest_process">
+      <bpmndi:BPMNEdge id="Flow_111vfcs_di" bpmnElement="Flow_111vfcs">
         <omgdi:waypoint x="180" y="165" />
         <omgdi:waypoint x="232" y="165" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="BPMNShape_startEvent1" bpmnElement="startEvent1">
         <omgdc:Bounds x="150" y="150" width="30" height="30" />
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds x="153" y="187" width="25" height="14" />
+          <omgdc:Bounds x="151" y="187" width="29" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_13de1tb_di" bpmnElement="Event_13de1tb">
+      <bpmndi:BPMNShape id="Event_0u2fx71_di" bpmnElement="Event_0u2fx71">
         <omgdc:Bounds x="232" y="147" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="240" y="190" width="20" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
