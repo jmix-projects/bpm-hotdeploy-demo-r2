@@ -3,10 +3,11 @@
         caption="msg://anotherProcessForm.caption">
     <layout expand="actionsPanel" spacing="true">
         <form>
-            <textField id="description" caption="Title"/>
+            <textField id="description" caption="Title 2"/>
         </form>
+        <colorPicker/>
         <hbox id="actionsPanel" spacing="true">
-            <button id="startProcessBtn" icon="font-icon:CHECK" caption="Begin"/>
+            <button id="startProcessBtn" icon="font-icon:CHECK" caption="Begin Updated Process"/>
         </hbox>
     </layout>
 </window>

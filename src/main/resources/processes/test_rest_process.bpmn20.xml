@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:jmix="http://jmix.io/schema/bpm/bpmn" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.flowable.org/processdef">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:jmix="http://jmix.io/schema/bpm/bpmn" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:flowable="http://flowable.org/bpmn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.flowable.org/processdef">
   <process id="test_rest_process" name="TestRestProcess" isExecutable="true">
     <startEvent id="startEvent1" name="Begin">
       <extensionElements>
@@ -8,15 +8,27 @@
       <outgoing>Flow_111vfcs</outgoing>
     </startEvent>
     <endEvent id="Event_0u2fx71" name="End">
-      <incoming>Flow_111vfcs</incoming>
+      <incoming>Flow_05tle1a</incoming>
     </endEvent>
-    <sequenceFlow id="Flow_111vfcs" sourceRef="startEvent1" targetRef="Event_0u2fx71" />
+    <sequenceFlow id="Flow_111vfcs" sourceRef="startEvent1" targetRef="Activity_0a7tlry" />
+    <sequenceFlow id="Flow_05tle1a" sourceRef="Activity_0a7tlry" targetRef="Event_0u2fx71" />
+    <serviceTask id="Activity_0a7tlry" name="ServiceForRestChange" flowable:expression="${demo_TestRestProcessBean.testProcessMethod()}" jmix:taskType="springBean" jmix:beanName="demo_TestRestProcessBean">
+      <extensionElements>
+        <jmix:springBean beanName="demo_TestRestProcessBean" methodName="testProcessMethod" />
+      </extensionElements>
+      <incoming>Flow_111vfcs</incoming>
+      <outgoing>Flow_05tle1a</outgoing>
+    </serviceTask>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_process">
     <bpmndi:BPMNPlane id="BPMNPlane_process" bpmnElement="test_rest_process">
       <bpmndi:BPMNEdge id="Flow_111vfcs_di" bpmnElement="Flow_111vfcs">
         <omgdi:waypoint x="180" y="165" />
-        <omgdi:waypoint x="232" y="165" />
+        <omgdi:waypoint x="230" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05tle1a_di" bpmnElement="Flow_05tle1a">
+        <omgdi:waypoint x="330" y="165" />
+        <omgdi:waypoint x="382" y="165" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="BPMNShape_startEvent1" bpmnElement="startEvent1">
         <omgdc:Bounds x="150" y="150" width="30" height="30" />
@@ -25,10 +37,13 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0u2fx71_di" bpmnElement="Event_0u2fx71">
-        <omgdc:Bounds x="232" y="147" width="36" height="36" />
+        <omgdc:Bounds x="382" y="147" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds x="240" y="190" width="20" height="14" />
+          <omgdc:Bounds x="390" y="190" width="20" height="14" />
         </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_19er2n3_di" bpmnElement="Activity_0a7tlry">
+        <omgdc:Bounds x="230" y="125" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
