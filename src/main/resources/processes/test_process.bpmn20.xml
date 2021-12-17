@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:jmix="http://jmix.io/schema/bpm/bpmn" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.flowable.org/processdef">
   <process id="test_process" name="Test_process" isExecutable="true">
-    <startEvent id="startEvent1">
+    <startEvent id="startEvent1" name="Start">
       <extensionElements>
         <jmix:formData type="jmix-screen" openMode="DIALOG" screenId="demo_ProcessForm" />
       </extensionElements>
@@ -32,6 +32,9 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="BPMNShape_startEvent1" bpmnElement="startEvent1">
         <omgdc:Bounds x="150" y="150" width="30" height="30" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="153" y="187" width="25" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_13de1tb_di" bpmnElement="Event_13de1tb">
         <omgdc:Bounds x="442" y="147" width="36" height="36" />
